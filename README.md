@@ -14,7 +14,7 @@ Durante el desarrollo surgieron varios desafíos técnicos que fueron superados:
 2. **Configuración de Aplicaciones**: Fue necesario registrar manualmente la app `gestion` en el archivo `settings.py` para que Django reconociera los modelos.
 3. **Autenticación en GitHub**: Debido a las políticas de seguridad actuales, la subida del código requirió la generación de un **Personal Access Token (classic)** en lugar de la contraseña convencional.
 
-## 🚀 Cómo ejecutar el proyecto
+##  Cómo ejecutar el proyecto
 1. Clonar el repositorio: `git clone https://github.com/repo819-eng/ProyectoNegocio.git`
 2. Instalar Django: `pip install django`
 3. Ejecutar migraciones: `python3 manage.py migrate`
