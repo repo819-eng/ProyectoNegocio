@@ -20,3 +20,15 @@ Durante el desarrollo surgieron varios desafíos técnicos que fueron superados:
 3. Ejecutar migraciones: `python3 manage.py migrate`
 4. Crear superusuario: `python3 manage.py createsuperuser`
 5. Iniciar servidor: `python3 manage.py runserver`
+
+## Acceso al Panel de Administración
+
+Para gestionar el inventario, utiliza las siguientes credenciales en http://127.0.0.1:8000/admin:
+Usuario: admin
+Contraseña: admin
+
+## Análisis y Evaluación Personal
+
+El desarrollo de esta aplicación ha permitido entender cómo Django facilita la creación de sistemas de gestión mediante su panel de administración y su ORM relacional.
+
+Aunque el proceso tomó más tiempo del previsto debido a la configuración del entorno en Linux y la gestión de permisos, el resultado es una herramienta funcional que cumple con los requisitos de un CRUD relacional. He aprendido la importancia de gestionar correctamente los entornos virtuales y las dependencias (requirements.txt) para asegurar que el proyecto sea reproducible en cualquier máquina.
