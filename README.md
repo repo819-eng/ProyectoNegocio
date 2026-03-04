@@ -1,34 +1,62 @@
-# Proyecto de Gestión de Negocio - Django
+# 🚀 Proyecto de Gestión de Negocio - Django
 
-Este proyecto consiste en una aplicación web desarrollada con **Django** para la gestión de inventario, permitiendo administrar categorías y productos de forma relacional.
+Este proyecto consiste en una aplicación web desarrollada con **Django** para la gestión de inventario de un negocio de calzado, permitiendo administrar categorías y productos de forma relacional.
 
-## Características del Proyecto
-* **Gestión de Categorías**: Permite agrupar productos (ej: Zapatillas, Electrónica).
-* **Gestión de Productos**: Registro de artículos con nombre, precio, stock y categoría asociada.
-* **Panel de Administración**: Interfaz completa (CRUD) para Crear, Leer, Actualizar y Borrar datos de forma visual.
-* **Base de Datos Relacional**: Uso de `ForeignKey` para conectar productos con sus respectivas categorías.
+---
 
-##  Problemas Encontrados y Soluciones
-Durante el desarrollo surgieron varios desafíos técnicos que fueron superados:
-1. **Permisos de Administrador (sudo)**: Al intentar crear el entorno virtual, hubo conflictos de permisos en el sistema Linux. Se solucionó instalando las dependencias a nivel de usuario y configurando el proyecto directamente en la carpeta local.
-2. **Configuración de Aplicaciones**: Fue necesario registrar manualmente la app `gestion` en el archivo `settings.py` para que Django reconociera los modelos.
-3. **Autenticación en GitHub**: Debido a las políticas de seguridad actuales, la subida del código requirió la generación de un **Personal Access Token (classic)** en lugar de la contraseña convencional.
+## 🛠️ 1. Herramientas utilizadas y provadas
+Para el desarrollo de esta aplicación se han utilizado y testeado las siguientes tecnologías:
+* **Lenguaje:** Python 3.10
+* **Framework:** Django 5.x
+* **Base de Datos:** SQLite (motor relacional por defecto de Django)
+* **Control de Versiones:** Git y GitHub
+* **Entorno de desarrollo:** Terminal de Linux (Ubuntu/Debian) y VS Code
+* **Gestión de Dependencias:** pip y archivo `requirements.txt`
 
-##  Cómo ejecutar el proyecto
-1. Clonar el repositorio: `git clone https://github.com/repo819-eng/ProyectoNegocio.git`
-2. Instalar Django: `pip install django`
-3. Ejecutar migraciones: `python3 manage.py migrate`
-4. Crear superusuario: `python3 manage.py createsuperuser`
-5. Iniciar servidor: `python3 manage.py runserver`
+---
 
-## Acceso al Panel de Administración
+## 🏗️ 2. Proceso de creación del código
+El desarrollo se ha realizado siguiendo estos pasos técnicos:
+1. **Inicialización:** Creación del proyecto base y la aplicación `gestion`.
+2. **Modelado de Datos:** Definición de la relación $1:N$ entre las entidades `Categoria` y `Producte` mediante `ForeignKey`.
+3. **Persistencia:** Ejecución de migraciones con `makemigrations` y `migrate` para generar las tablas en SQLite.
+4. **Interfaz Administrativa:** Registro de modelos en `admin.py` para habilitar un sistema CRUD (Create, Read, Update, Delete) completo y funcional.
+5. **Pruebas:** Carga de datos reales (Zapatillas) para validar la integridad de la base de datos.
 
-Para gestionar el inventario, utiliza las siguientes credenciales en http://127.0.0.1:8000/admin:
-Usuario: admin
-Contraseña: admin
+---
 
-## Análisis y Evaluación Personal
+## 📦 3. Instrucciones de instalación
+Siga estos pasos para ejecutar el proyecto en su máquina local:
 
-El desarrollo de esta aplicación ha permitido entender cómo Django facilita la creación de sistemas de gestión mediante su panel de administración y su ORM relacional.
+**Clonar el repositorio:**
+git clone [https://github.com/repo819-eng/ProyectoNegocio.git](https://github.com/repo819-eng/ProyectoNegocio.git)
+cd ProyectoNegocio
+   
+Instalar dependencias:
+pip install -r requirements.txt
 
-Aunque el proceso tomó más tiempo del previsto debido a la configuración del entorno en Linux y la gestión de permisos, el resultado es una herramienta funcional que cumple con los requisitos de un CRUD relacional. He aprendido la importancia de gestionar correctamente los entornos virtuales y las dependencias (requirements.txt) para asegurar que el proyecto sea reproducible en cualquier máquina.
+Preparar la Base de Datos:
+python3 manage.py migrate
+
+Iniciar el servidor:
+python3 manage.py runserver
+
+## Acceso al CRUD:
+Entre en http://127.0.0.1:8000/admin con las siguientes credenciales:
+
+## Usuario: admin
+## Contraseña: admin
+
+## 4. Dificultades encontradas
+
+Durante el proceso surgieron varios desafíos técnicos que fueron superados con éxito:
+    Entornos Virtuales en Linux: Conflictos de permisos (sudo) al intentar crear el venv. Se solucionó instalando dependencias a nivel de usuario.
+    Seguridad de GitHub: La necesidad de generar un Personal Access Token (classic) para poder realizar push desde la terminal de Linux debido a las políticas actuales de Git.
+    Módulos de Django: Errores de importación solucionados registrando correctamente la app en settings.py.
+
+## 5. Análisis y evaluación personal
+
+La aplicación cumple con todos los objetivos propuestos: es funcional, reproducible y gestiona datos relacionales.
+
+## Valoración final:
+A pesar de las dificultades iniciales con la terminal de Linux y el tiempo invertido en la configuración de Git, la experiencia ha servido para comprender el flujo de trabajo real de un desarrollador: desde la lógica de base de datos hasta el despliegue en un repositorio público. El uso de la IA y la documentación oficial de Django han sido clave para resolver errores rápidamente.
